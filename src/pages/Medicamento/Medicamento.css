@@ -1,0 +1,296 @@
+/* Base layout */
+.medicamento-list-container,
+.medicamento-detalhar-container,
+.detalhar-container,
+.medicamento-form-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header */
+.medicamento-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.novo-btn,
+.voltar-btn {
+  padding: 8px 12px;
+  background-color: #00b3b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Tabela */
+.tabela-wrapper {
+  overflow-x: auto;
+}
+
+.tabela-medicamentos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 600px;
+}
+
+.tabela-medicamentos th,
+.tabela-medicamentos td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabela-medicamentos th {
+  background-color: #f2f2f2;
+  color: #1a2a3a;
+}
+
+.tabela-medicamentos tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.tabela-medicamentos tr:hover {
+  background-color: #f0f8ff;
+}
+
+/* Ações */
+.acoes {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.acoes button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Detalhes */
+.medicamento-detalhar-container h2,
+.detalhar-container h2 {
+  color: #1a2a3a;
+  margin-bottom: 20px;
+}
+
+.medicamento-detalhes p,
+.detalhes p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Formulário */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #00b3b3;
+  color: white;
+}
+
+.form-actions button[type="button"] {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.form-error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .medicamento-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+  .tabela-medicamentos {
+    font-size: 13px;
+  }
+
+  .tabela-medicamentos th,
+  .tabela-medicamentos td {
+    padding: 8px;
+  }
+
+ /* Paginação */
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.paginacao button {
+  padding: 10px 16px;
+  font-size: 14px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  touch-action: manipulation;
+  min-height: 44px;
+}
+
+.paginacao button:hover:not(:disabled) {
+  background-color: #00b3b3;
+  color: white;
+}
+
+.paginacao button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.paginacao button:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.paginacao span {
+  font-weight: bold;
+  color: #007bff;
+  background-color: #f0f8ff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .paginacao span {
+    font-weight: bold;
+    color: #4a5a6a; /* Slate Blue */
+    font-size: 15px;
+    background-color: #f0f8ff;
+  }
+}
+
+@media (max-width: 480px) {
+  .paginacao {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .paginacao button {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    background-color: #e0e0e0;
+  }
+
+  .paginacao span {
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    color: #5c6f7b; /* Steel Gray */
+    background-color: #e0e0e0;
+  }
+}
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+  .paginacao button {
+    background-color: #444;
+    color: #eee;
+  }
+
+  .paginacao button:hover:not(:disabled) {
+    background-color: #00b3b3;
+    color: white;
+  }
+
+  .paginacao button:disabled {
+    background-color: #555;
+    color: #aaa;
+  }
+
+  .paginacao span {
+    color: #aab4be; /* Mist Gray */
+    background-color: #222;
+  }
+
+  @media (max-width: 768px) {
+    .paginacao span {
+      color: #aab4be; /* Mist Gray */
+      background-color: #222;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .paginacao span {
+      color: #b0b8c1; /* Soft Silver */
+      background-color: #333;
+    }
+  }
+}
+
+.paginacao-mui {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+}

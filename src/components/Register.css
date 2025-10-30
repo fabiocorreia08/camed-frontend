@@ -1,0 +1,68 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.register-header h1 {
+  font-size: 2.5rem;
+  color: #3ccfcf;
+  margin-bottom: 0.5rem;
+}
+
+.register-header p {
+  font-size: 1.2rem;
+  color: #3ccfcf;
+  margin-bottom: 2rem;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.register-form input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.btn-cadastrar {
+  background-color: #3ccfcf;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cadastrar:hover {
+  background-color: #2bb3b3;
+}
+
+.btn-voltar {
+  background-color: white;
+  color: #3ccfcf;
+  border: 2px solid #3ccfcf;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #3ccfcf;
+  color: white;
+}

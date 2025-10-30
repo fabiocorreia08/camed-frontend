@@ -1,0 +1,117 @@
+/* Navbar base */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+/* Lados da navbar */
+.navbar-left,
+.navbar-right {
+  flex: 0 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ícones */
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  fill: #1a2a3a;
+  transition: fill 0.3s ease;
+}
+
+.icon:hover {
+  fill: #00b3b3;
+}
+
+/* Título central */
+.navbar-center {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.company-name {
+  font-size: 18px;
+  margin: 0;
+  color: #1a2a3a;
+}
+
+.logo-name {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Botão de menu */
+.menu-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  min-width: 160px;
+  max-width: 90vw;
+  word-break: break-word;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  text-decoration: none;
+  color: #1a2a3a;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .company-name {
+    font-size: 16px;
+  }
+
+  .logo-name {
+    font-size: 11px;
+  }
+
+  .dropdown-menu {
+    top: 50px;
+    right: 10px;
+  }
+}

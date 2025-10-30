@@ -1,0 +1,81 @@
+/* Home.css */
+
+.home-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #1a2a3a;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  position: relative;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.home-icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.menu-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.home-icon img,
+.menu-icon img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.company-name {
+  text-align: center;
+  width: 100%;
+}
+
+.company-name h1 {
+  font-size: 18px;
+  margin: 0;
+  color: #1a2a3a;
+}
+
+.company-name span {
+  font-size: 12px;
+  color: #888;
+}
+
+.home-content {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.home-content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #1a2a3a;
+}
+
+.home-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.turquoise-shape {
+  width: 100%;
+  height: 150px;
+  background: #00b3b3;
+  border-top-left-radius: 80% 100px;
+  border-top-right-radius: 80% 100px;
+}
