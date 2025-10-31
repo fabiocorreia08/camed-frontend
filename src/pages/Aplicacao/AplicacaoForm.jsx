@@ -72,11 +72,11 @@ export default function AplicacaoForm({
           <option value="">Selecione</option>
           {medicamentos.map(medicamento => (
             <option key={medicamento.id} value={medicamento.id}>
-              {medicamento.nome}
+              {medicamento.nome} - {medicamento.identificador}
             </option>
           ))}
         </select>
-
+          
         {medicamentoSelecionado && (
           <p>
             <strong>Identificador:</strong> {medicamentoSelecionado.identificador}
